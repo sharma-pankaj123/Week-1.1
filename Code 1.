@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int removeKey(int arr[], int size, int key) {
+    int count = 0; // Count of values not equal to key
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i] != key) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 2, 5, 2};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int key = 2;
+
+    int result = removeKey(arr, size, key);
+    printf("Number of values not equal to %d: %d\n", key, result);
+
+    return 0;
+}
