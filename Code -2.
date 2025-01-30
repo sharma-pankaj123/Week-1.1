@@ -2,14 +2,14 @@
 
 int removeDuplicates(int arr[], int size) {
     if (size == 0) {
-        return 0; // Empty array
+        return 0; 
     }
 
-    int newSize = 1; // Start with the first element as unique
+    int newSize = 1; 
 
     for (int i = 1; i < size; i++) {
         if (arr[i] != arr[newSize - 1]) {
-            arr[newSize] = arr[i]; // Add the unique element to the new position
+            arr[newSize] = arr[i]; m
             newSize++;
         }
     }
